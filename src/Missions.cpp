@@ -17,7 +17,7 @@ std::map<int, std::vector<Missions::MissionEndOffset>> gMissionEndOffsets
 	{16, {{4704}}},
 	{17, {{3528}}},
 	{18, {{3719}}},
-	{19, {{15165, 15195}, {15439}, {15693}}}
+	{19, {{15165, 15195}, {15439}, {15693}}},
 	{20, {{3506}}},
 	{21, {{5700}}},
 	{22, {{1988}}},
@@ -368,8 +368,6 @@ Missions::Initialise()
 	plugin::patch::RedirectCall(0x591883, LoadMissionData);
 	plugin::patch::RedirectCall(0x59087A, SaveMissionData);
 	plugin::patch::RedirectCall(0x48C5BC, InitAtNewGame);
-
-	printf("%p\n", mSaveStructure);
 	
 	mTempMissionData = std::make_unique<unsigned char[]>(SIZE_MISSION_SCRIPT);
 	mLocalVariables = std::make_unique<unsigned int[]>(16);

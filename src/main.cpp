@@ -12,10 +12,12 @@
 #include "Autosave.h"
 #include "Config.h"
 #include "Cutscenes.h"
+#include "Player.h"
 
 class Rainbomizer {
 public:
 	Rainbomizer() {
+		Player::Initialise();
 		Missions::Initialise();
 		Cutscenes::Initialise();
 		Config::Initialise();
